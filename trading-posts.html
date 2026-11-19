@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Trading posts</title><script>window.__resources={"https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js": "assets/js/react.production.min.js", "https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js": "assets/js/react-dom.production.min.js"};</script>
+<script src="assets/js/dc-runtime.js"></script></head><body><x-dc><helmet><style>/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/poppins-400-devanagari.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/poppins-400-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/poppins-400-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/poppins-500-devanagari.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/poppins-500-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/poppins-500-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/poppins-600-devanagari.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/poppins-600-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/poppins-600-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/poppins-800-devanagari.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/poppins-800-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/poppins-800-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style><style>body{margin:0;background:#f4f4f2}
+.pg{font-family:'DM Sans',sans-serif;color:#141413;padding:24px 16px 56px}
+.wrap{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.logo{font:400 28px 'Instrument Serif',serif;display:flex;gap:8px;align-items:center}
+.nav{display:flex;gap:4px;flex-wrap:wrap;font-size:14px;font-weight:500}
+.nav a{color:#141413;text-decoration:none;padding:12px 16px;border-radius:24px}
+.nav a.on{background:#141413;color:#fff}
+.btn{height:48px;padding:0 24px;border-radius:24px;border:0;background:#141413;color:#fff;font:600 14px 'DM Sans',sans-serif;cursor:pointer}
+.btn.o{background:#fff;color:#141413;border:1px solid #cfcfca}
+.btn.r{background:#fff;color:#a32d2d;border:1px solid #e3c4c4;height:44px;padding:0 16px}
+.h1{font:400 68px/1 'Instrument Serif',serif;margin:0 0 16px;letter-spacing:-1px}
+.h2{font:400 40px/1.1 'Instrument Serif',serif;margin:0}
+.mut{color:#5c5c58;font-size:14px;line-height:1.5;margin:0}
+.hero{border-radius:28px;background:#d6e0cf;padding:56px;box-sizing:border-box}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#fff;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:14px;box-sizing:border-box}
+.stat{font:400 52px 'Instrument Serif',serif}
+.f{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600}
+.f input,.f select,.f textarea{height:48px;border-radius:14px;border:1px solid #d6d6d1;background:#fff;padding:0 14px;font:500 14px 'DM Sans',sans-serif;box-sizing:border-box}
+.f textarea{height:110px;padding:12px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.pill{height:44px;padding:0 20px;border-radius:22px;border:1px solid #d6d6d1;background:#fff;font:600 14px 'DM Sans',sans-serif;cursor:pointer;color:#141413;display:inline-flex;align-items:center;gap:8px}
+.pill.on{background:#141413;color:#fff;border-color:#141413}
+.cv{height:200px;border-radius:16px;display:flex;align-items:center;justify-content:center}
+.bk{border-radius:5px 10px 10px 5px;width:110px;height:160px;padding:14px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;font:400 19px/1.1 'Instrument Serif',serif;box-shadow:0 10px 24px rgba(20,20,19,.18)}
+.bd{font-size:12px;font-weight:600;border-radius:12px;padding:4px 10px;background:#d6e0cf;color:#1f3b34;display:inline-block;white-space:nowrap}
+.bd.x{background:#f0ddd0;color:#7a3a14}
+.ov{overflow-x:auto}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
+.tbl th{text-align:left;color:#5c5c58;font-weight:500;padding:10px 8px;border-bottom:1px solid #e6e6e2}
+.tbl td{padding:12px 8px;border-bottom:1px solid #eee}
+.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.srch{height:48px;border-radius:14px;background:#ebebe8;padding:0 16px;display:flex;align-items:center;flex:1;min-width:200px;color:#5c5c58;font-size:14px;box-sizing:border-box}
+.ph{height:120px;border-radius:14px;border:1.5px dashed #b5b5b0;display:flex;align-items:center;justify-content:center;color:#5c5c58;font-size:14px}
+.cm{background:#f4f4f2;border-radius:14px;padding:12px 14px;font-size:14px}
+.av{width:40px;height:40px;border-radius:50%;background:#d6e0cf;flex:none}
+.bz{height:10px;border-radius:5px;background:#1f3b34}
+.rd{display:flex;align-items:center;gap:8px;border:1px solid #d6d6d1;border-radius:14px;padding:12px 16px;font-size:14px;font-weight:600;flex:1;min-width:140px}
+*{font-family:'Poppins',sans-serif!important}
+.h1,.hero h1,.touch h2{font-weight:800!important;letter-spacing:-.5px!important}
+.hero h1{font-size:60px!important;line-height:1.08!important}
+.touch h2{font-size:44px!important;line-height:1.1!important}
+.h2,.panel h4,.stat,.stat div{font-weight:600!important}
+.h2{font-size:34px!important;line-height:1.2!important;letter-spacing:0!important}
+.panel h4{font-size:26px!important;line-height:1.25!important}
+.stat,.stat div{font-size:38px!important;line-height:1.1!important}
+.logo{font-size:22px!important;font-weight:600!important}
+.nav,.nav a,.sel,.search{font-weight:500!important}
+.tt,.card h3,.bk b,.bk{font-weight:500!important}
+.bk{font-size:16px!important;line-height:1.25!important}
+.bk b{font-size:18px!important;line-height:1.2!important}
+.bk i{font-weight:500!important}
+p,.mut,.cm,.tbl td,.ph{font-weight:400}
+.bd,.f,.tbl th,.rd{font-weight:500}
+button,.btn,.pill,.tag,.circ,.dt{font-weight:500!important}
+.th{background:#fff;border-radius:28px;max-width:640px;width:100%;margin:0 auto;box-sizing:border-box;padding:8px 24px 16px}
+.tabs{display:flex;margin:0 -24px}
+.tabs button{flex:1;height:48px;border:0;border-bottom:2px solid #e4e4e0;background:transparent;font:500 14px 'Poppins',sans-serif;color:#5c5c58;cursor:pointer}
+.tabs button.on{border-color:#141413;color:#141413}
+.pt{display:grid;grid-template-columns:40px minmax(0,1fr);gap:0 12px;padding:16px 0;border-bottom:1px solid #ececea}
+.pt.nb{border-bottom:0;padding-bottom:0}.pt.cn{padding-top:0}
+.lc{display:flex;flex-direction:column;align-items:center}
+.ln{width:2px;background:#e4e4e0;border-radius:1px;margin-top:8px;flex:1}
+.pb{display:flex;flex-direction:column;gap:8px;min-width:0}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:14px}
+.hd span{color:#5c5c58;font-weight:400}
+.tx{margin:0;font-size:15px;line-height:1.5;font-weight:400}
+.ia{height:44px;min-width:44px;border:0;background:transparent;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:0 10px;border-radius:22px;cursor:pointer;font:500 13px 'Poppins',sans-serif;color:#5c5c58}
+.ia:hover{background:#f4f4f2}.ia.rp{color:#a32d2d;margin-left:auto}
+.acts{display:flex;align-items:center;gap:2px;margin-left:-10px}
+.sa{width:20px;height:20px;border-radius:50%;background:#d6e0cf;border:2px solid #fff;margin-left:-8px}
+.cm2{display:flex;align-items:center;gap:10px;color:#5c5c58;font-size:13px}
+a.btn,a.pill,a.circ,a.ib,a.ia{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;box-sizing:border-box}
+a.pill{gap:8px}
+.ib{width:44px;height:44px;border-radius:50%;border:1px solid #dcdcd8;background:#fff;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;color:#141413}
+.nav a.ib,.bar a.ib{width:44px;height:44px;min-width:44px;padding:0;border-radius:50%;flex:none;box-sizing:border-box}
+.ib svg{flex:none;width:20px;height:20px}
+</style></helmet><div class="pg"><div class="wrap"><div class="bar"><a href="index.html" class="logo" style="text-decoration:none;color:#141413"><img src="assets/images/logo.png" alt="CampusBazaar" height="56" style="display:block;height:56px;width:auto;max-width:100%"></a><div class="nav"><a href="index.html">Dashboard</a><a href="listings.html">Listings</a><a href="trading-posts.html" class="on">Posts</a><a href="create-item.html">Sell</a><a href="profile.html">Profile</a><a href="login.html">Log in</a><a href="cart.html" class="ib" aria-label="Cart, 2 items" style="margin-left:8px;position:relative"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 8H6"></path><circle cx="9" cy="20" r="1.3"></circle><circle cx="18" cy="20" r="1.3"></circle></svg><span style="position:absolute;top:-5px;right:-5px;min-width:20px;height:20px;border-radius:10px;background:#d32f2f;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;padding:0 5px;box-sizing:border-box;border:2px solid #f4f4f2;line-height:1">2</span></a></div></div><div class="th"><div class="tabs"><button class="on">For you</button><button>Following</button><button>Offering</button><button>Wanted</button></div><div class="pt"><div class="lc"><div class="av"></div></div><div class="pb"><b style="font-size:14px">[Username]</b><div class="mut" style="font-size:15px">What do you want to trade?</div><div class="row" style="justify-content:space-between"><div class="acts"><button class="ia" aria-label="Add image"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="m21 16-5-5-8 8"></path></svg></button></div><button class="btn" style="height:40px;padding:0 20px">Post</button></div></div></div><div class="pt nb"><div class="lc"><div class="av"></div><div class="ln"></div></div><div class="pb"><div class="hd"><div><b>[Username]</b> <span>[time]</span></div><button class="ia" aria-label="More"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle></svg></button></div><p class="tx">[Post text: what they want to trade]</p><div class="row" style="gap:8px"><span class="bd">Offering: [item]</span><span class="bd x">Wants: [item]</span></div><div class="ph" style="height:220px">Image</div><div class="acts"><button class="ia" aria-label="Like"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"></path></svg>[n]</button><button class="ia" aria-label="Comment"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg>[n]</button><button class="ia" aria-label="Repost"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3l3 3-3 3M4 11V9a3 3 0 0 1 3-3h13M7 21l-3-3 3-3M20 13v2a3 3 0 0 1-3 3H4"></path></svg></button><button class="ia" aria-label="Share"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3 11 13M22 3l-7 18-4-8-8-4z"></path></svg></button><button class="ia rp" aria-label="Report post"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 4 2 4H5"></path></svg>Report</button></div></div></div><div class="pt cn"><div class="lc"><div class="av" style="width:28px;height:28px;margin-left:6px;background:#f0ddd0"></div></div><div class="pb"><div class="hd"><div><b>[Commenter]</b> <span>[time]</span></div></div><p class="tx">[Comment text]</p><div class="cm2"><span style="display:inline-flex;padding-left:8px"><span class="sa"></span><span class="sa" style="background:#f0ddd0"></span></span>View all [n] replies</div></div></div><div class="pt nb"><div class="lc"><div class="av"></div><div class="ln"></div></div><div class="pb"><div class="hd"><div><b>[Username]</b> <span>[time]</span></div><button class="ia" aria-label="More"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle></svg></button></div><p class="tx">[Post text: what they want to trade]</p><div class="row" style="gap:8px"><span class="bd">Offering: [item]</span><span class="bd x">Wants: [item]</span></div><div class="acts"><button class="ia" aria-label="Like"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"></path></svg>[n]</button><button class="ia" aria-label="Comment"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg>[n]</button><button class="ia" aria-label="Repost"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3l3 3-3 3M4 11V9a3 3 0 0 1 3-3h13M7 21l-3-3 3-3M20 13v2a3 3 0 0 1-3 3H4"></path></svg></button><button class="ia" aria-label="Share"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3 11 13M22 3l-7 18-4-8-8-4z"></path></svg></button><button class="ia rp" aria-label="Report post"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 4 2 4H5"></path></svg>Report</button></div></div></div><div class="pt cn"><div class="lc"><div class="av" style="width:28px;height:28px;margin-left:6px;background:#f0ddd0"></div></div><div class="pb"><div class="hd"><div><b>[Commenter]</b> <span>[time]</span></div></div><p class="tx">[Comment text]</p><div class="cm2"><span style="display:inline-flex;padding-left:8px"><span class="sa"></span><span class="sa" style="background:#f0ddd0"></span></span>View all [n] replies</div></div></div><div class="pt"><div class="lc"><div class="av"></div></div><div class="pb"><div class="hd"><div><b>[Username]</b> <span>[time]</span></div><button class="ia" aria-label="More"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle></svg></button></div><p class="tx">[Post text: what they want to trade]</p><div class="row" style="gap:8px"><span class="bd">Offering: [item]</span><span class="bd x">Wants: [item]</span></div><div class="acts"><button class="ia" aria-label="Like"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"></path></svg>[n]</button><button class="ia" aria-label="Comment"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg>[n]</button><button class="ia" aria-label="Repost"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3l3 3-3 3M4 11V9a3 3 0 0 1 3-3h13M7 21l-3-3 3-3M20 13v2a3 3 0 0 1-3 3H4"></path></svg></button><button class="ia" aria-label="Share"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3 11 13M22 3l-7 18-4-8-8-4z"></path></svg></button><button class="ia rp" aria-label="Report post"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 4 2 4H5"></path></svg>Report</button></div></div></div></div></div></div></x-dc><script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:1500}}">class Component extends DCLogic{renderVals(){return {};}}</script></body></html>

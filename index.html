@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>CampusBazaar Dashboard</title>
+<script>window.__resources={"https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js": "assets/js/react.production.min.js", "https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js": "assets/js/react-dom.production.min.js"};</script>
+<script src="assets/js/dc-runtime.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/poppins-400-devanagari.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/poppins-400-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/poppins-400-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/poppins-500-devanagari.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/poppins-500-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/poppins-500-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/poppins-600-devanagari.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/poppins-600-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/poppins-600-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/poppins-800-devanagari.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/poppins-800-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/poppins-800-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+body{margin:0;background:#f4f4f2}
+.pg{font-family:'DM Sans',sans-serif;color:#141413;background:#f4f4f2;padding:24px 16px 48px;display:flex;flex-direction:column;gap:32px}
+.wrap{width:100%;max-width:1180px;margin:0 auto;box-sizing:border-box}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font:400 28px 'Instrument Serif',serif;display:flex;align-items:center;gap:8px}
+.nav{display:flex;align-items:center;gap:20px;font-size:14px;font-weight:500}
+.ib{width:44px;height:44px;border-radius:50%;border:1px solid #dcdcd8;background:#fff;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;color:#141413}
+.filters{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.sel,.search{height:44px;border-radius:14px;background:#ebebe8;border:0;padding:0 16px;font:500 14px 'DM Sans',sans-serif;color:#5c5c58;display:flex;align-items:center;justify-content:space-between;gap:24px;box-sizing:border-box}
+.sel{min-width:190px}.search{flex:1;min-width:200px;max-width:380px}
+.pill{height:44px;padding:0 20px;border-radius:22px;border:1px solid #dcdcd8;background:#fff;font:600 14px 'DM Sans',sans-serif;color:#141413;cursor:pointer}
+.pill.on{background:#141413;color:#fff;border-color:#141413}
+.hero{border-radius:28px;background:#d6e0cf;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px;padding:56px;min-height:420px;box-sizing:border-box;overflow:hidden}
+.hero h1{font:400 76px/1 'Instrument Serif',serif;margin:0 0 20px;max-width:560px;letter-spacing:-1px}
+.hero p{margin:0 0 32px;max-width:420px;font-size:16px;line-height:1.5;color:#3a3f36}
+.cta{display:inline-flex;gap:8px;align-items:center}
+.btn{height:52px;padding:0 28px;border-radius:26px;border:0;background:#141413;color:#fff;font:600 15px 'DM Sans',sans-serif;cursor:pointer}
+.circ{width:52px;height:52px;border-radius:50%;background:#fff;border:0;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;color:#141413}
+.stack{display:flex;align-items:flex-end;padding-right:24px}
+.bk{border-radius:6px 12px 12px 6px;padding:20px 18px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;font-family:'Instrument Serif',serif;box-shadow:0 12px 28px rgba(20,20,19,.18)}
+.bk b{font-weight:400;font-size:26px;line-height:1.05}.bk i{font:600 11px 'DM Sans',sans-serif;font-style:normal;letter-spacing:1px;text-transform:uppercase}
+.sec{display:flex;flex-direction:column;gap:20px}
+.head{display:flex;align-items:center;justify-content:space-between;gap:16px;color:#5c5c58;font-size:15px;font-weight:500}
+.h2{font:400 52px/1.05 'Instrument Serif',serif;text-align:center;margin:8px 0;letter-spacing:-.5px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:#fff;border-radius:24px;padding:16px;display:flex;flex-direction:column;gap:14px}
+.stat{background:#fff;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:8px}
+.stat p{margin:0;font-size:14px;color:#5c5c58}.stat div{font:400 54px/1 'Instrument Serif',serif}
+.cv{border-radius:16px;height:300px;position:relative;display:flex;align-items:center;justify-content:center}
+.tag{position:absolute;top:12px;right:12px;height:34px;border-radius:17px;background:#fff;border:0;padding:0 8px 0 14px;display:inline-flex;align-items:center;gap:8px;font:600 12px 'DM Sans',sans-serif;cursor:pointer;color:#141413}
+.card h3{margin:0;font-size:16px;font-weight:600}.card span{font-size:14px;color:#5c5c58}
+.offer{display:flex;flex-wrap:wrap;border-radius:28px;overflow:hidden;background:#fff}
+.offer>div{flex:1 1 360px;min-height:380px;display:flex;align-items:center;justify-content:center;padding:32px;box-sizing:border-box}
+.panel{background:#fff;border-radius:24px;padding:36px;max-width:360px;text-align:center;display:flex;flex-direction:column;gap:14px;align-items:center;box-shadow:0 8px 30px rgba(20,20,19,.06)}
+.panel h4{margin:0;font:400 34px/1.1 'Instrument Serif',serif}.panel p{margin:0;font-size:14px;line-height:1.5;color:#5c5c58}
+.touch{background:#fff;border-radius:28px;padding:56px;display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:space-between}
+.touch h2{font:400 64px/1 'Instrument Serif',serif;margin:0 0 12px;letter-spacing:-1px}
+.touch p{margin:0;color:#5c5c58;font-size:15px;max-width:380px;line-height:1.5}
+.mail{display:flex;gap:8px;flex-wrap:wrap}
+.mail input{height:52px;border-radius:26px;border:1px solid #dcdcd8;padding:0 22px;font:500 14px 'DM Sans',sans-serif;min-width:240px;box-sizing:border-box}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:#5c5c58}
+.bz{height:10px;border-radius:5px;background:#1f3b34}
+.car{position:relative;width:min(520px,100%);height:360px;margin:0 auto}
+.car .bk{position:absolute;left:50%;top:20px;width:190px;height:290px;transition:transform .6s ease,opacity .6s ease}
+.cc{display:flex;gap:12px;align-items:center;justify-content:center;position:absolute;left:0;right:0;bottom:0}
+.dt{width:24px;height:44px;border:0;background:transparent;padding:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.dt span{display:block;height:8px;border-radius:4px;background:#1f3b34;transition:all .3s}
+.cc .circ{width:44px;height:44px}
+*{font-family:'Poppins',sans-serif!important}
+.h1,.hero h1,.touch h2{font-weight:800!important;letter-spacing:-.5px!important}
+.hero h1{font-size:60px!important;line-height:1.08!important}
+.touch h2{font-size:44px!important;line-height:1.1!important}
+.h2,.panel h4,.stat,.stat div{font-weight:600!important}
+.h2{font-size:34px!important;line-height:1.2!important;letter-spacing:0!important}
+.panel h4{font-size:26px!important;line-height:1.25!important}
+.stat,.stat div{font-size:38px!important;line-height:1.1!important}
+.logo{font-size:22px!important;font-weight:600!important}
+.nav,.nav a,.sel,.search{font-weight:500!important}
+.tt,.card h3,.bk b,.bk{font-weight:500!important}
+.bk{font-size:16px!important;line-height:1.25!important}
+.bk b{font-size:18px!important;line-height:1.2!important}
+.bk i{font-weight:500!important}
+p,.mut,.cm,.tbl td,.ph{font-weight:400}
+.bd,.f,.tbl th,.rd{font-weight:500}
+button,.btn,.pill,.tag,.circ,.dt{font-weight:500!important}
+a.btn,a.pill,a.circ,a.ib,a.ia{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;box-sizing:border-box}
+a.pill{gap:8px}
+.nav a.ib,.bar a.ib{width:44px;height:44px;min-width:44px;padding:0;border-radius:50%;flex:none;box-sizing:border-box}
+.ib svg{flex:none;width:20px;height:20px}
+</style>
+</helmet>
+<div class="pg">
+<div class="wrap" style="display:flex;flex-direction:column;gap:20px">
+<div class="bar">
+<button class="ib" aria-label="Menu"><svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h10"></path></svg></button>
+<a href="index.html" class="logo" style="text-decoration:none;color:#141413"><img src="assets/images/logo.png" alt="CampusBazaar" height="56" style="display:block;height:56px;width:auto;max-width:100%"></a>
+<div class="nav"><a href="#" style="color:#141413;text-decoration:none">About</a><a href="#" style="color:#141413;text-decoration:none">FAQs</a><a href="cart.html" class="ib" aria-label="Cart, 2 items" style="position:relative"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 8H6"></path><circle cx="9" cy="20" r="1.3"></circle><circle cx="18" cy="20" r="1.3"></circle></svg><span style="position:absolute;top:-5px;right:-5px;min-width:20px;height:20px;border-radius:10px;background:#d32f2f;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;padding:0 5px;box-sizing:border-box;border:2px solid #f4f4f2;line-height:1">2</span></a></div>
+</div>
+<div class="filters">
+<sc-raw-select class="sel" aria-label="Categories"><option>All categories</option><optgroup label="Type"><option>Textbooks</option><option>Equipment</option><option>Others</option></optgroup><optgroup label="Subject"><option>Engineering</option><option>Science</option><option>Business</option><option>Medicine</option><option>Arts and Languages</option><option>IT</option><option>Lab</option><option>Art and Design</option><option>Calculators</option></optgroup></sc-raw-select>
+<div class="sel">New Products <span aria-hidden="true">▾</span></div>
+<label class="search"><span>Search textbooks and equipment…</span><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg></label>
+<button class="pill on">Textbooks</button><button class="pill">Equipment</button><button class="pill">Available</button><button class="pill">Sellers</button>
+</div>
+
+<div class="hero">
+<div>
+<h1>Pass it on.<br>Study smarter.</h1>
+<p>A campus marketplace to buy, sell and swap textbooks and equipment, picked by students and delivered by people you trust.</p>
+<div class="cta"><a href="listings.html" class="btn" style="background:#fff;color:#141413">Start shopping</a><a href="listings.html" class="circ" aria-label="Go"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div>
+</div>
+<div class="car" sc-camel-on-mouse-enter="{{ pause }}" sc-camel-on-mouse-leave="{{ resume }}">
+<sc-for list="{{ cards }}" as="c" hint-placeholder-count="5">
+<div class="bk" style="{{ c.style }}"><i>{{ c.tag }}</i><b>{{ c.title }}</b></div>
+</sc-for>
+<div class="cc">
+<button class="circ" aria-label="Previous book" sc-camel-on-click="{{ prev }}"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"></path></svg></button>
+<div style="display:flex;align-items:center">
+<sc-for list="{{ dots }}" as="d" hint-placeholder-count="5">
+<button class="dt" aria-label="{{ d.label }}" sc-camel-on-click="{{ d.go }}"><span style="{{ d.style }}"></span></button>
+</sc-for>
+</div>
+<button class="circ" aria-label="Next book" sc-camel-on-click="{{ next }}"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="wrap sec">
+<div class="head"><span>Dashboard</span></div>
+<div class="grid">
+<div class="stat"><p>Most popular category</p><div>[Category]</div></div>
+<div class="stat"><p>Total monetary value exchanged</p><div>RM [value]</div></div>
+<div class="stat"><p>Active user growth</p><div>[+ %]</div></div>
+</div>
+<div class="card" style="padding:28px"><span style="font-weight:600;color:#141413">Popular categories</span><div style="display:grid;grid-template-columns:140px 1fr;gap:14px 16px;align-items:center;font-size:14px"><span>Engineering</span><div class="bz" style="width:90%"></div><span>Science</span><div class="bz" style="width:62%"></div><span>Business</span><div class="bz" style="width:38%"></div></div><span>Sample order. Bars fill from real sales data once connected.</span></div>
+</div>
+
+<div class="wrap sec">
+<div class="head"><span>Catalog</span><a href="listings.html" class="pill">View all</a></div>
+<h2 class="h2">Fresh arrivals and<br>new listings.</h2>
+<div class="grid">
+<div class="card"><div class="cv" style="background:#e9d9c8"><button class="tag">Add to collection <span style="font-size:18px;color:#141413">+</span></button><div class="bk" style="width:150px;height:220px;background:#c9633f;color:#fff"><i>Textbook</i><b>Calculus I</b></div></div><div><h3>Calculus I</h3><span>[Seller name] · RM [price]</span></div></div>
+<div class="card"><div class="cv" style="background:#d9e2d3"><button class="tag">Add to collection <span style="font-size:18px;color:#141413">+</span></button><div class="bk" style="width:150px;height:220px;background:#1f3b34;color:#f4f4f2"><i>Textbook</i><b>Physics Fundamentals</b></div></div><div><h3>Physics Fundamentals</h3><span>[Seller name] · RM [price]</span></div></div>
+<div class="card"><div class="cv" style="background:#dde3ea"><button class="tag">Add to collection <span style="font-size:18px;color:#141413">+</span></button><div class="bk" style="width:150px;height:220px;background:#2f4a78;color:#fff"><i>Equipment</i><b>Scientific Calculator</b></div></div><div><h3>Scientific Calculator</h3><span>[Seller name] · RM [price]</span></div></div>
+<div class="card"><div class="cv" style="background:#f0e0dc"><button class="tag">Add to collection <span style="font-size:18px;color:#141413">+</span></button><div class="bk" style="width:150px;height:220px;background:#f4f4f2;color:#141413"><i>Equipment</i><b>Lab Coat</b></div></div><div><h3>Lab Coat</h3><span>[Seller name] · RM [price]</span></div></div>
+</div>
+</div>
+
+<div class="wrap sec">
+<h2 class="h2">Listings and offers for<br>every student</h2>
+<div class="offer">
+<div style="background:#efefec"><div class="bk" style="width:200px;height:290px;background:#e8d3b0;transform:rotate(-4deg)"><i>Editor's pick</i><b>Study Starter Bundle</b></div></div>
+<div style="background:linear-gradient(135deg,#fbe3d2,#fdf1e8)"><div class="panel"><span style="font-size:12px;font-weight:600;background:#f4f4f2;border-radius:12px;padding:4px 12px">Offers</span><h4>Exclusive deals await</h4><p>Get the textbooks and equipment you need at friendlier prices. Selected offers for members only.</p><div class="cta"><a href="listings.html" class="btn">Try now</a><a href="listings.html" class="circ" style="background:#f4f4f2" aria-label="Go"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div></div></div>
+</div>
+</div>
+
+<div class="wrap touch">
+<div><h2>Stay in touch.</h2><p>Get new listings and trading tips straight to your inbox.</p></div>
+<div class="mail"><input type="email" placeholder="Your email" aria-label="Your email"><button class="btn">Subscribe</button></div>
+</div>
+
+<div class="wrap foot"><span>© CampusBazaar</span><span>About · FAQs · Contact</span></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:2900}}">
+const BOOKS=[
+{tag:'Textbook',title:'Calculus I',bg:'#f2c7a5',fg:'#141413'},
+{tag:'Textbook',title:'Physics Fundamentals',bg:'#1f3b34',fg:'#f4f4f2'},
+{tag:'Equipment',title:'Lab Essentials',bg:'#f4f4f2',fg:'#141413'},
+{tag:'Equipment',title:'Scientific Calculator',bg:'#2f4a78',fg:'#ffffff'},
+{tag:'Textbook',title:'Organic Chemistry',bg:'#c9633f',fg:'#ffffff'}
+];
+class Component extends DCLogic {
+  idx() { return (this.state && this.state.i) || 0; }
+  go(d) { const n = BOOKS.length; this.setState({ i: (this.idx() + d + n) % n }); }
+  jump(k) { this.setState({ i: k }); this.start(); }
+  start() { this.stop(); this.t = setInterval(() => { if (!this.hov) this.go(1); }, 3500); }
+  stop() { if (this.t) clearInterval(this.t); }
+  componentDidMount() { this.start(); }
+  componentWillUnmount() { this.stop(); }
+  renderVals() {
+    const n = BOOKS.length, i = this.idx();
+    const cards = BOOKS.map((b, k) => {
+      const d = (k - i + n) % n;
+      let t = 'translateX(-50%) scale(.7)', z = 1, o = 0;
+      if (d === 0) { t = 'translateX(-50%)'; z = 3; o = 1; }
+      else if (d === 1) { t = 'translateX(calc(-50% + 150px)) scale(.86) rotate(6deg)'; z = 2; o = 1; }
+      else if (d === n - 1) { t = 'translateX(calc(-50% - 150px)) scale(.86) rotate(-6deg)'; z = 2; o = 1; }
+      return { tag: b.tag, title: b.title, style: 'background:' + b.bg + ';color:' + b.fg + ';transform:' + t + ';z-index:' + z + ';opacity:' + o };
+    });
+    const dots = BOOKS.map((b, k) => ({ label: 'Show ' + b.title, go: () => this.jump(k), style: 'width:' + (k === i ? 24 : 8) + 'px;opacity:' + (k === i ? 1 : .35) }));
+    return { cards, dots,
+      next: () => { this.go(1); this.start(); },
+      prev: () => { this.go(-1); this.start(); },
+      pause: () => { this.hov = true; },
+      resume: () => { this.hov = false; } };
+  }
+}
+</script>
+
+
+</body></html>
